@@ -37,6 +37,7 @@ EOF
   echo -e "\e[1;31m2. 科技lion-"
   echo -e "\e[1;34m3. x-ui-富强面板"
   echo -e "\e[1;33m4. 八合一-富强脚本"
+  echo -e "\e[1;33m4. Sing-box 全家桶"
   echo -e "\e[1;31m0. 退出\e[0m"
 
   read -p "请选择一级菜单选项 (0-4): " main_choice
@@ -136,6 +137,18 @@ EOF
       read -p "确认要继续吗？(Y/N): " confirm
       if [ "$confirm" == "Y" ] || [ "$confirm" == "y" ]; then
         wget -P /root -N --no-check-certificate "https://raw.githubusercontent.com/mack-a/v2ray-agent/master/install.sh" && chmod 700 /root/install.sh && /root/install.sh
+        # Don't clear the screen
+        clear_screen=0
+      else
+        echo "取消操作"
+      fi
+      ;;
+      4)
+      # 【Sing-box 全家桶】
+      clear_screen=1 # Define clear_screen here
+      read -p "确认要继续吗？(Y/N): " confirm
+      if [ "$confirm" == "Y" ] || [ "$confirm" == "y" ]; then
+        bash <(wget -qO- https://raw.githubusercontent.com/fscarmen/sing-box/main/sing-box.sh)
         # Don't clear the screen
         clear_screen=0
       else
