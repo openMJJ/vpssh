@@ -27,7 +27,7 @@ while true; do
                                                                          
 
 版本V1.0-20230930 
-curl -sS -O https://raw.githubusercontent.com/openshsh/vpssh/main/opensh.sh && chmod +x opensh.sh && ./opensh.sh
+curl -sS -O https://raw.githubusercontent.com/openMJJ/vpssh/main/opensh.sh && chmod +x opensh.sh && ./opensh.sh
 ===============================================================================================
 EOF
   echo -e "\e[0m"
