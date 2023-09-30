@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash 
 
 # 设置终端字体颜色为黄色
 echo -e "\e[1;33m"
