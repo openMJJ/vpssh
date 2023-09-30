@@ -37,7 +37,7 @@ EOF
   echo -e "\e[1;31m2. 科技lion-"
   echo -e "\e[1;34m3. x-ui-富强面板"
   echo -e "\e[1;33m4. 八合一-富强脚本"
-  echo -e "\e[1;33m4. Sing-box 全家桶"
+  echo -e "\e[1;33m5. Sing-box 全家桶"
   echo -e "\e[1;31m0. 退出\e[0m"
 
   read -p "请选择一级菜单选项 (0-4): " main_choice
@@ -143,7 +143,7 @@ EOF
         echo "取消操作"
       fi
       ;;
-      4)
+    5)
       # 【Sing-box 全家桶】
       clear_screen=1 # Define clear_screen here
       read -p "确认要继续吗？(Y/N): " confirm
