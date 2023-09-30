@@ -44,6 +44,7 @@ EOF
   case $main_choice in
     1)
       # Timeshift sub-menu
+      clear_screen=1 # Define clear_screen here
       while true; do
         # Timeshift sub-menu
         echo -e "\e[1;33m==================================="
@@ -86,6 +87,7 @@ EOF
               echo "无效的镜像编号"
             fi
             ;;
+         
           5)
             # Delete an image
             read -p "请输入要删除的镜像编号: " snapshot_number
@@ -113,12 +115,12 @@ EOF
       ;;
     2)
       # 科技lion
-      clear_screen
+      clear_screen=1 # Define clear_screen here
       curl -sS -O https://kejilion.pro/kejilion.sh && chmod +x kejilion.sh && ./kejilion.sh
       ;;
     3)
       # x-ui
-      clear_screen
+      clear_screen=1 # Define clear_screen here
       read -p "确认要继续吗？(Y/N): " confirm
       if [ "$confirm" == "Y" ] || [ "$confirm" == "y" ]; then
         bash <(curl -Ls https://raw.githubusercontent.com/FranzKafkaYu/x-ui/master/install.sh)
@@ -130,12 +132,12 @@ EOF
       ;;
     4)
       # 八合一
-      clear_screen
+      clear_screen=1 # Define clear_screen here
       read -p "确认要继续吗？(Y/N): " confirm
       if [ "$confirm" == "Y" ] || [ "$confirm" == "y" ]; then
         wget -P /root -N --no-check-certificate "https://raw.githubusercontent.com/mack-a/v2ray-agent/master/install.sh" && chmod 700 /root/install.sh && /root/install.sh
         # Don't clear the screen
-       clear_screen=0
+        clear_screen=0
       else
         echo "取消操作"
       fi
