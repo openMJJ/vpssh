@@ -15,13 +15,13 @@ while true; do
   # OpEnS ASCII art (Preserved as requested)
   echo -e "\e[1;32m"
   cat << "EOF"
-  .oooooo.              oooooooooooo              .oooooo..o oooo        
- d8P'  `Y8b             `888'     `8             d8P'    `Y8 `888        
-888      888 oo.ooooo.   888         ooo. .oo.   Y88bo.       888 .oo.   
-888      888  888' `88b  888oooo8    `888P"Y88b   `"Y8888o.   888P"Y88b  
-888      888  888   888  888    "     888   888       `"Y88b  888   888  
-`88b    d88'  888   888  888       o  888   888  oo     .d8P  888   888  
- `Y8bood8P'   888bod8P' o888ooooood8 o888o o888o 8""88888P'  o888o o888o 
+  .oooooo.              oooooooooooo              .oooooo..o oooo        ooo   
+ d8P'  `Y8b             `888'     `8             d8P'    `Y8 `888        888  
+888      888 oo.ooooo.   888         ooo. .oo.   Y88bo.       888 .oo.   888 .oo.
+888      888  888' `88b  888oooo8    `888P"Y88b   `"Y8888o.   888P"Y88b  888P"Y88b
+888      888  888   888  888    "     888   888       `"Y88b  888   888  888   888
+`88b    d88'  888   888  888       o  888   888  oo     .d8P  888   888  888   888 
+ `Y8bood8P'   888bod8P' o888ooooood8 o888o o888o 8""88888P'  o888o o888o o888o o888o
               888                                                        
              o888o                                                       
                                                                          
