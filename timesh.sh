@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 设置终端字体颜色为黄色
-echo -e "\e[6;1;33m"
+echo -e "\e[1;33m"
 
 # 清屏标志
 clear_screen=1
@@ -11,17 +11,26 @@ while true; do
   if [ $clear_screen -eq 1 ]; then
     clear
   fi
+
+  # OpEnS ASCII艺术
+  echo -e "\e[1;32m"
+  cat << "EOF"
+  ___            _____           ____    _     
+  / _ \   _ __   | ____|  _ __   / ___|  | |__  
+ | | | | | '_ \  |  _|   | '_ \  \___ \  | '_ \ 
+ | |_| | | |_) | | |___  | | | |  ___) | | | | |
+  \___/  | .__/  |_____| |_| |_| |____/  |_| |_|
+         |_|          
+=================================================
+EOF
+  echo -e "\e[0m"
   
-  # 标题栏
-  echo -e "\e[6;1;33m==================================="
-  echo -e "=== OpEnSh ==="
-  echo -e "===================================\e[0m"
   # 一级菜单
-  echo "1. Timeshift"
+  echo -e "\e[1;36m1. Timeshift"
   echo "2. 科技lion"
   echo "3. x-ui"
   echo "4. 八合一"
-  echo "0. 退出"
+  echo -e "0. 退出\e[0m"
 
   read -p "请选择一级菜单选项 (0-4): " main_choice
 
@@ -30,16 +39,16 @@ while true; do
       # Timeshift 二级菜单
       while true; do
         # Timeshift 二级菜单
-        echo -e "\e[6;1;33m==================================="
+        echo -e "\e[1;33m==================================="
         echo -e "=== Timeshift 功能菜单 ==="
         echo -e "===================================\e[0m"
         # 主菜单
-        echo "1. 安装 Timeshift"
+        echo -e "\e[1;36m1. 安装 Timeshift"
         echo "2. 创建镜像 (请输入 comments):"
         echo "3. 查看所有镜像"
         echo "4. 还原镜像 (请输入要还原的镜像编号):"
         echo "5. 删除镜像 (请输入要删除的镜像编号):"
-        echo "0. 返回上级菜单"
+        echo -e "0. 返回上级菜单\e[0m"
 
         read -p "请选择选项 (0-5): " choice
 
@@ -125,7 +134,7 @@ while true; do
       # 退出
       tput sgr0
       clear
-      echo "谢谢使用脚本，再见！"
+      echo -e "\e[1;32m谢谢使用脚本，再见！\e[0m"
       exit 0
       ;;
     *)
