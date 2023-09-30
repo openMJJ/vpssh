@@ -1,18 +1,18 @@
-#!/bin/bash 
+#!/bin/bash
 
-# 设置终端字体颜色为黄色
+# Set terminal font color to yellow
 echo -e "\e[1;33m"
 
-# 清屏标志
+# Clear screen flag
 clear_screen=1
 
 while true; do
-  # 如果需要清屏，才清屏
+  # Clear the screen if necessary
   if [ $clear_screen -eq 1 ]; then
     clear
   fi
 
-  # OpEnS ASCII艺术
+  # OpEnS ASCII art (Preserved as requested)
   echo -e "\e[1;32m"
   cat << "EOF"
   .oooooo.              oooooooooooo              .oooooo..o oooo        
@@ -32,53 +32,49 @@ curl -sS -O https://raw.githubusercontent.com/qq56607/vpssh/main/opensh.sh && ch
 EOF
   echo -e "\e[0m"
   
-  # 一级菜单
+  # Main menu
   echo -e "\e[1;36m1. Timeshift-系统镜像"
-
-  echo "2. 科技lion-"
-
-  echo "3. x-ui-富强面板"
-
-  echo "4. 八合一-富强脚本"
-
-  echo -e "0. 退出\e[0m"
+  echo -e "\e[1;31m2. 科技lion-"
+  echo -e "\e[1;34m3. x-ui-富强面板"
+  echo -e "\e[1;33m4. 八合一-富强脚本"
+  echo -e "\e[1;31m0. 退出\e[0m"
 
   read -p "请选择一级菜单选项 (0-4): " main_choice
 
   case $main_choice in
     1)
-      # Timeshift 二级菜单
+      # Timeshift sub-menu
       while true; do
-        # Timeshift 二级菜单
+        # Timeshift sub-menu
         echo -e "\e[1;33m==================================="
         echo -e "=== Timeshift 功能菜单 ==="
         echo -e "===================================\e[0m"
-        # 主菜单
+        # Main menu
         echo -e "\e[1;36m1. 安装 Timeshift"
-        echo "2. 创建镜像 (请输入 comments):"
-        echo "3. 查看所有镜像"
-        echo "4. 还原镜像 (请输入要还原的镜像编号):"
-        echo "5. 删除镜像 (请输入要删除的镜像编号):"
-        echo -e "0. 返回上级菜单\e[0m"
+        echo -e "\e[1;31m2. 创建镜像 (请输入 comments):"
+        echo -e "\e[1;34m3. 查看所有镜像"
+        echo -e "\e[1;33m4. 还原镜像 (请输入要还原的镜像编号):"
+        echo -e "\e[1;31m5. 删除镜像 (请输入要删除的镜像编号):"
+        echo -e "\e[1;31m0. 返回上级菜单\e[0m"
 
         read -p "请选择选项 (0-5): " choice
 
         case $choice in
           1)
-            # 安装 Timeshift
+            # Install Timeshift
             sudo apt install timeshift
             ;;
           2)
-            # 创建镜像
+            # Create an image
             read -p "请输入 comments: " comments
             timeshift --create --comments "after update: $comments"
             ;;
           3)
-            # 查看所有镜像
+            # View all images
             timeshift --list
             ;;
           4)
-            # 还原镜像
+            # Restore an image
             read -p "请输入要还原的镜像编号: " snapshot_number
             actual_snapshot_number=$((snapshot_number + 1))
             snapshot_name=$(timeshift --list | grep -Eo '[0-9]{4}-[0-9]{2}-[0-9]{2}_[0-9]{2}-[0-9]{2}-[0-9]{2}' | sed -n "${actual_snapshot_number}p")
@@ -91,7 +87,7 @@ EOF
             fi
             ;;
           5)
-            # 删除镜像
+            # Delete an image
             read -p "请输入要删除的镜像编号: " snapshot_number
             actual_snapshot_number=$((snapshot_number + 1))
             snapshot_name=$(timeshift --list | grep -Eo '[0-9]{4}-[0-9]{2}-[0-9]{2}_[0-9]{2}-[0-9]{2}-[0-9]{2}' | sed -n "${actual_snapshot_number}p")
@@ -105,7 +101,7 @@ EOF
             fi
             ;;
           0)
-            # 返回上级菜单
+            # Return to the previous menu
             clear_screen=1
             break
             ;;
@@ -117,14 +113,16 @@ EOF
       ;;
     2)
       # 科技lion
+      clear_screen
       curl -sS -O https://kejilion.pro/kejilion.sh && chmod +x kejilion.sh && ./kejilion.sh
       ;;
     3)
       # x-ui
+      clear_screen
       read -p "确认要继续吗？(Y/N): " confirm
       if [ "$confirm" == "Y" ] || [ "$confirm" == "y" ]; then
         bash <(curl -Ls https://raw.githubusercontent.com/FranzKafkaYu/x-ui/master/install.sh)
-        # 不清屏
+        # Don't clear the screen
         clear_screen=0
       else
         echo "取消操作"
@@ -132,17 +130,18 @@ EOF
       ;;
     4)
       # 八合一
+      clear_screen
       read -p "确认要继续吗？(Y/N): " confirm
       if [ "$confirm" == "Y" ] || [ "$confirm" == "y" ]; then
         wget -P /root -N --no-check-certificate "https://raw.githubusercontent.com/mack-a/v2ray-agent/master/install.sh" && chmod 700 /root/install.sh && /root/install.sh
-        # 不清屏
-        clear_screen=0
+        # Don't clear the screen
+       clear_screen=0
       else
         echo "取消操作"
       fi
       ;;
     0)
-      # 退出
+      # Exit
       tput sgr0
       clear
       echo -e "\e[1;32m谢谢使用脚本，再见！\e[0m"
