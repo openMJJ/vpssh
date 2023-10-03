@@ -33,14 +33,14 @@ EOF
   echo -e "\e[0m"
   
   # Main menu
-echo -e "\e[1;36m1. Timeshift-系统镜像"
-echo -e "\e[1;31m2. 科技lion-"
-echo -e "\e[1;34m3. x-ui-富强面板"
-echo -e "\e[1;33m4. 八合一-富强脚本"
-echo -e "\e[1;37m5. Sing-box 全家桶"
-echo -e "\e[1;39m6. LxdPro开小鸡-不支持ARM"
-echo -e "\e[1;43m7. 萌咖DD\e[0m"
-echo -e "\e[1;31m0. 退出\e[0m"  # 添加 \e[0m 来重置文本颜色和背景颜色
+echo -e "\e[1;96m1. Timeshift-系统镜像"
+echo -e "\e[1;91m2. 科技lion-"
+echo -e "\e[1;94m3. x-ui-富强面板"
+echo -e "\e[1;93m4. 八合一-富强脚本"
+echo -e "\e[1;97m5. Sing-box 全家桶"
+echo -e "\e[1;99m6. LxdPro开小鸡-不支持ARM"
+echo -e "\e[33m7. 萌咖DD"
+echo -e "\e[31m0. 退出\e[0m" # 添加 \e[0m 来重置文本颜色和背景颜色
 
   read -p "请选择一级菜单选项 (0-4): " main_choice
 
