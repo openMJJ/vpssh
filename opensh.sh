@@ -39,7 +39,7 @@ EOF
   echo -e "\e[1;33m4. 八合一-富强脚本"
   echo -e "\e[1;37m5. Sing-box 全家桶"
   echo -e "\e[1;39m6. LxdPro开小鸡-不支持ARM"
-  echo -e "\e[1;41m7. 萌咖DD"
+  echo -e "\e[1;43m7. 萌咖DD"
   echo -e "\e[1;31m0. 退出\e[0m"
 
   read -p "请选择一级菜单选项 (0-4): " main_choice
@@ -169,9 +169,9 @@ EOF
         echo "取消操作"
       fi
       ;; 
- 7)
+    7)
       clear
-      echo "请备份数据，将为你重装系统，预计花费15分钟。"
+      echo "请备份数据，将为你重装系统，预计花费15分钟,port:6022。"
       read -p "确定继续吗？(Y/N): " choice
           case "$choice" in
             [Yy])
@@ -201,7 +201,17 @@ EOF
               else
                   echo "未知的包管理器!"
               fi
-              bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/MoeClub/Note/master/InstallNET.sh') $xitong -v 64 -p $vpspasswd -port 22
+              read -p "请输入你的端口号: " vpsport
+
+              if command -v apt &>/dev/null; then
+                  apt update -y && apt install -y wget
+              elif command -v yum &>/dev/null; then
+                  yum -y update && yum -y install wget
+              else
+                  echo "未知的包管理器!"
+              fi
+             
+              bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/MoeClub/Note/master/InstallNET.sh') $xitong -v 64 -p $vpspasswd -port  $vpsport
               ;;
             [Nn])
               echo "已取消"
