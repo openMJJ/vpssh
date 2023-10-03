@@ -38,7 +38,7 @@ EOF
   echo -e "\e[1;34m3. x-ui-富强面板"
   echo -e "\e[1;33m4. 八合一-富强脚本"
   echo -e "\e[1;37m5. Sing-box 全家桶"
-  echo -e "\e[1;39m5. LxdPro开小鸡-不支持ARM"
+  echo -e "\e[1;39m6. LxdPro开小鸡-不支持ARM"
   echo -e "\e[1;31m0. 退出\e[0m"
 
   read -p "请选择一级菜单选项 (0-4): " main_choice
