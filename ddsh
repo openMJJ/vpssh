@@ -1,0 +1,5 @@
+bash <(wget --no-check-certificate -qO- 'https://moeclub.org/attachment/LinuxShell/InstallNET.sh') -d 11 -v 64 -a --ip-addr 195.133.1.248 --ip-mask 255.255.255.0 -p tss19740522 -port 6022  #三毛
+bash <(wget --no-check-certificate -qO- 'qiu.sh/dd') u 20.04 -v 64 -a --mirror '<http://archive.ubuntu.com/ubuntu>' -p tss19740522 -port 6022    #秋水
+bash <(wget --no-check-certificate -qO- 'qiu.sh/dd') -d 11 -v 64 -a --mirror '<http://mirrors.cloud.tencent.com/debian/>' -p tss19740522 -port 6022   #秋水
+bash <(wget --no-check-certificate -qO- '<https://moeclub.org/attachment/LinuxShell/InstallNET.sh>') -d 11 -v 64 -a --mirror '<https://mirrors.huaweicloud.com/debian/>' -p tss19740522 -port 6022  #5K
+bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/MoeClub/Note/master/InstallNET.sh') -u 20.04 -v 64 --mirror http://archive.ubuntu.com/ubuntu -p "tss19740522" -port "20011" #萌咖
