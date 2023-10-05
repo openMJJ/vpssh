@@ -124,15 +124,39 @@ echo -e "\e[1;31m0. \e[38;5;196m退出\e[0m" # 添加 \e[0m 来重置文本颜�
       curl -sS -O https://kejilion.pro/kejilion.sh && chmod +x kejilion.sh && ./kejilion.sh
       ;;
     3)
-      # x-ui
+      # 检查是否已经安装了x-ui
+      if which x-ui > /dev/null 2>&1; then
+      # x-ui已经安装
       clear_screen=1 # Define clear_screen here
-      read -p "确认要继续吗？(Y/N): " confirm
-      if [ "$confirm" == "Y" ] || [ "$confirm" == "y" ]; then
+      echo "1) 执行 X-ui 命令"
+      echo "2) 重新安装 X-ui"
+      echo "3) 退出"
+      read -p "请选择选项 (1/2/3): " option
+      case "$option" in
+        1)
+          # 执行 X-ui 命令
+          x-ui
+          ;;
+        2)
+          # 重新安装 X-ui
+          bash <(curl -Ls https://raw.githubusercontent.com/FranzKafkaYu/x-ui/master/install.sh)
+          # 不清屏
+          clear_screen=0
+          ;;
+        3)
+          # 退出
+          echo "取消操作"
+          ;;
+        *)
+          echo "无效选项"
+          ;;
+      esac
+    else
+        # x-ui未安装，直接安装
         bash <(curl -Ls https://raw.githubusercontent.com/FranzKafkaYu/x-ui/master/install.sh)
-        # Don't clear the screen
+        # 不清屏
         clear_screen=0
-      else
-        echo "取消操作"
+        read -n 1 -s -r -p "按任意键继续..."
       fi
       ;;
     4)
