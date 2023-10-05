@@ -33,15 +33,15 @@ EOF
   echo -e "\e[0m"
   
   # Main menu
-echo -e "\e[96m1. Timeshift-系统镜像"
-echo -e "\e[91m2. 科技lion-"
-echo -e "\e[94m3. x-ui-富强面板"
-echo -e "\e[93m4. 八合一-富强脚本"
-echo -e "\e[97m5. Sing-box 全家桶"
-echo -e "\e[98m6. TGPROTO"
-echo -e "\e[99m7. LxdPro开小鸡-不支持ARM"
-echo -e "\e[33m8. 萌咖DD"
-echo -e "\e[31m0. 退出\e[0m" # 添加 \e[0m 来重置文本颜色和背景颜色
+echo -e "\e[1;96m1. \e[38;5;226mTimeshift-系统镜像"
+echo -e "\e[1;91m2. \e[38;5;208m科技lion"
+echo -e "\e[1;94m3. \e[38;5;75mx-ui-富强面板"
+echo -e "\e[1;93m4. \e[38;5;208m八合一-富强脚本"
+echo -e "\e[1;97m5. \e[38;5;33mSing-box 全家桶"
+echo -e "\e[1;98m6. \e[38;5;45mTGPROTO"
+echo -e "\e[1;99m7. \e[38;5;197mLxdPro开小鸡 (不支持ARM)"
+echo -e "\e[1;33m8. \e[38;5;226m萌咖DD"
+echo -e "\e[1;31m0. \e[38;5;196m退出\e[0m" # 添加 \e[0m 来重置文本颜色和背景颜色
 
   read -p "请选择一级菜单选项 (0-8): " main_choice
 
@@ -55,11 +55,11 @@ echo -e "\e[31m0. 退出\e[0m" # 添加 \e[0m 来重置文本颜色和背景颜�
         echo -e "=== Timeshift 功能菜单 ==="
         echo -e "===================================\e[0m"
         # Main menu
-        echo -e "\e[1;36m1. 安装 Timeshift"
-        echo -e "\e[1;31m2. 创建镜像 (请输入 comments):"
-        echo -e "\e[1;34m3. 查看所有镜像"
-        echo -e "\e[1;33m4. 还原镜像 (请输入要还原的镜像编号):"
-        echo -e "\e[1;31m5. 删除镜像 (请输入要删除的镜像编号):"
+        echo -e "\e[1;31m1. Timeshift - 安装 Timeshift\e[0m"
+        echo -e "\e[1;32m2. 创建镜像 (请输入 comments)\e[0m"
+        echo -e "\e[1;33m3. 查看所有镜像\e[0m"
+        echo -e "\e[1;34m4. 还原镜像 (请输入要还原的镜像编号)\e[0m"
+        echo -e "\e[1;35m5. 删除镜像 (请输入要删除的镜像编号)\e[0m"
         echo -e "\e[1;31m0. 返回上级菜单\e[0m"
 
         read -p "请选择选项 (0-5): " choice
@@ -159,11 +159,11 @@ echo -e "\e[31m0. 退出\e[0m" # 添加 \e[0m 来重置文本颜色和背景颜�
       fi
       ;;
     6)
-     # TG-PROTO
-     clear_screen=1 # Define clear_screen here
-     curl -sS -O https://raw.githubusercontent.com/sunpma/mtp/master/mtproxy.sh && chmod +x mtproxy.sh && ./mtproxy.sh
-     read -p "按任意键继续"
-     ;;
+      # TG-PROTO
+      clear_screen=1 # Define clear_screen here
+      curl -sS -O https://raw.githubusercontent.com/sunpma/mtp/master/mtproxy.sh && chmod +x mtproxy.sh && ./mtproxy.sh
+      read -p "按任意键继续..."
+      ;;
     7)
       # LxdPro开小鸡-不支持ARM"
       clear_screen=1 # Define clear_screen here
