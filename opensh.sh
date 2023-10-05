@@ -38,12 +38,13 @@ echo -e "\e[1;91m2. \e[38;5;208m科技lion"
 echo -e "\e[1;94m3. \e[38;5;75mx-ui-富强面板"
 echo -e "\e[1;93m4. \e[38;5;208m八合一-富强脚本"
 echo -e "\e[1;97m5. \e[38;5;33mSing-box 全家桶"
-echo -e "\e[1;98m6. \e[38;5;45mTGPROTO"
-echo -e "\e[1;99m7. \e[38;5;197mLxdPro开小鸡 (不支持ARM)"
-echo -e "\e[1;33m8. \e[38;5;226m萌咖DD"
+echo -e "\e[1;98m6. \e[38;5;45miptables端口转发"
+echo -e "\e[1;98m7. \e[38;5;45mTGPROTO"
+echo -e "\e[1;99m8. \e[38;5;197mLxdPro开小鸡 (不支持ARM)"
+echo -e "\e[1;33m9. \e[38;5;226m萌咖DD"
 echo -e "\e[1;31m0. \e[38;5;196m退出\e[0m" # 添加 \e[0m 来重置文本颜色和背景颜色
 
-  read -p "请选择一级菜单选项 (0-8): " main_choice
+  read -p "请选择一级菜单选项 (0-9): " main_choice
 
   case $main_choice in
     1)
@@ -151,7 +152,7 @@ echo -e "\e[1;31m0. \e[38;5;196m退出\e[0m" # 添加 \e[0m 来重置文本颜�
       clear_screen=1 # Define clear_screen here
       read -p "确认要继续吗？(Y/N): " confirm
       if [ "$confirm" == "Y" ] || [ "$confirm" == "y" ]; then
-        bash <(wget -qO- https://raw.githubusercontent.com/fscarmen/sing-box/main/sing-box.sh)
+        bash <(curl -fsSL https://raw.githubusercontent.com/fscarmen/sing-box/main/sing-box.sh)
         # Don't clear the screen
         clear_screen=0
       else
@@ -159,12 +160,18 @@ echo -e "\e[1;31m0. \e[38;5;196m退出\e[0m" # 添加 \e[0m 来重置文本颜�
       fi
       ;;
     6)
+      # iptables端口转发
+      clear_screen=1 # Define clear_screen here
+      bash <(curl -fsSL https://raw.githubusercontent.com/arloor/iptablesUtils/master/natcfg.sh)
+      read -p "按任意键继续..."
+      ;;    
+    7)
       # TG-PROTO
       clear_screen=1 # Define clear_screen here
       curl -sS -O https://raw.githubusercontent.com/sunpma/mtp/master/mtproxy.sh && chmod +x mtproxy.sh && ./mtproxy.sh
       read -p "按任意键继续..."
       ;;
-    7)
+    8)
       # LxdPro开小鸡-不支持ARM"
       clear_screen=1 # Define clear_screen here
       read -p "确认要继续吗？(Y/N): " confirm
@@ -176,7 +183,7 @@ echo -e "\e[1;31m0. \e[38;5;196m退出\e[0m" # 添加 \e[0m 来重置文本颜�
         echo "取消操作"
       fi
       ;; 
-    8)
+    9)
       clear
       echo "请备份数据，将为你重装系统，预计花费15分钟,port:6022"
       read -p "确定继续吗？(Y/N): " choice
