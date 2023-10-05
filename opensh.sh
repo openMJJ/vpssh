@@ -43,7 +43,7 @@ echo -e "\e[99m7. LxdPro开小鸡-不支持ARM"
 echo -e "\e[33m8. 萌咖DD"
 echo -e "\e[31m0. 退出\e[0m" # 添加 \e[0m 来重置文本颜色和背景颜色
 
-  read -p "请选择一级菜单选项 (0-4): " main_choice
+  read -p "请选择一级菜单选项 (0-8): " main_choice
 
   case $main_choice in
     1)
@@ -162,6 +162,7 @@ echo -e "\e[31m0. 退出\e[0m" # 添加 \e[0m 来重置文本颜色和背景颜�
      # TG-PROTO
      clear_screen=1 # Define clear_screen here
      curl -sS -O https://raw.githubusercontent.com/sunpma/mtp/master/mtproxy.sh && chmod +x mtproxy.sh && ./mtproxy.sh
+     read -p "按任意键继续"
      ;;
     7)
       # LxdPro开小鸡-不支持ARM"
