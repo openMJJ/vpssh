@@ -33,13 +33,14 @@ EOF
   echo -e "\e[0m"
   
   # Main menu
-echo -e "\e[1;96m1. Timeshift-系统镜像"
-echo -e "\e[1;91m2. 科技lion-"
-echo -e "\e[1;94m3. x-ui-富强面板"
-echo -e "\e[1;93m4. 八合一-富强脚本"
-echo -e "\e[1;97m5. Sing-box 全家桶"
-echo -e "\e[1;99m6. LxdPro开小鸡-不支持ARM"
-echo -e "\e[33m7. 萌咖DD"
+echo -e "\e[96m1. Timeshift-系统镜像"
+echo -e "\e[91m2. 科技lion-"
+echo -e "\e[94m3. x-ui-富强面板"
+echo -e "\e[93m4. 八合一-富强脚本"
+echo -e "\e[97m5. Sing-box 全家桶"
+echo -e "\e[98m6. TGPROTO"
+echo -e "\e[99m7. LxdPro开小鸡-不支持ARM"
+echo -e "\e[33m8. 萌咖DD"
 echo -e "\e[31m0. 退出\e[0m" # 添加 \e[0m 来重置文本颜色和背景颜色
 
   read -p "请选择一级菜单选项 (0-4): " main_choice
@@ -158,6 +159,11 @@ echo -e "\e[31m0. 退出\e[0m" # 添加 \e[0m 来重置文本颜色和背景颜�
       fi
       ;;
     6)
+     # TG-PROTO
+     clear_screen=1 # Define clear_screen here
+     curl -sS -O https://raw.githubusercontent.com/sunpma/mtp/master/mtproxy.sh && chmod +x mtproxy.sh && ./mtproxy.sh
+     ;;
+    7)
       # LxdPro开小鸡-不支持ARM"
       clear_screen=1 # Define clear_screen here
       read -p "确认要继续吗？(Y/N): " confirm
@@ -169,7 +175,7 @@ echo -e "\e[31m0. 退出\e[0m" # 添加 \e[0m 来重置文本颜色和背景颜�
         echo "取消操作"
       fi
       ;; 
-    7)
+    8)
       clear
       echo "请备份数据，将为你重装系统，预计花费15分钟,port:6022"
       read -p "确定继续吗？(Y/N): " choice
