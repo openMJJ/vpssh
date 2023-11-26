@@ -43,6 +43,7 @@ echo -e "\e[1;98m7. \e[38;5;45mTGPROTO"
 echo -e "\e[1;99m8. \e[38;5;197mLxdPro开小鸡 (不支持ARM)"
 echo -e "\e[1;33m9. \e[38;5;226m萌咖DD"
 echo -e "\e[1;33m10. \e[38;5;226mtraffmonetizer"
+echo -e "\e[1;34m11. \e[38;5;226四网回程"
 echo -e "\e[1;31m0. \e[38;5;196m退出\e[0m" # 添加 \e[0m 来重置文本颜色和背景颜色
 
   read -p "请选择一级菜单选项 (0-9): " main_choice
@@ -258,6 +259,18 @@ echo -e "\e[1;31m0. \e[38;5;196m退出\e[0m" # 添加 \e[0m 来重置文本颜�
       read -p "确认要继续吗？(Y/N): " confirm
       if [ "$confirm" == "Y" ] || [ "$confirm" == "y" ]; then
         docker run -d --restart=always --name tm traffmonetizer/cli_v2 start accept --token +NOOC2/4k8kH3MzVpBuJ5aw5VjC/BHT1/Z0tVBlkGzM=
+        # Don't clear the screen
+        clear_screen=0
+      else
+        echo "取消操作"
+      fi
+      ;; 
+      11)
+      # 四网回程
+      clear_screen=1 # Define clear_screen here
+      read -p "确认要继续吗？(Y/N): " confirm
+      if [ "$confirm" == "Y" ] || [ "$confirm" == "y" ]; then
+        curl -sSL https://raw.githubusercontent.com/vpsxb/testrace/main/testrace.sh | bash
         # Don't clear the screen
         clear_screen=0
       else
