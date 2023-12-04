@@ -282,17 +282,17 @@ echo -e "\e[1;31m0. \e[38;5;196m退出\e[0m" # 添加 \e[0m 来重置文本颜�
       ;; 
       12)
       # BlueSkyBox
-      clear_screen=1 # Define clear_screen here
+      clear_screen=0 # Define clear_screen here
       wget -O box.sh https://raw.githubusercontent.com/BlueSkyXN/SKY-BOX/main/box.sh && chmod +x box.sh && clear && ./box.sh
       ;;
       13)
       # VPSToolBox
-      clear_screen=1 # Define clear_screen here
+      clear_screen=0 # Define clear_screen here
       bash <(curl -Lso- https://sh.vps.dance/toolbox.sh)
       ;;
       14)
       # EdNovasBox
-      clear_screen=1 # Define clear_screen here
+      clear_screen=0 # Define clear_screen here
       wget -N https://cdn.jsdelivr.net/gh/ednovas/vpstoolbox@main/ednovastool.sh && chmod +x ednovastool.sh && ./ednovastool.sh
       ;;
     0)
