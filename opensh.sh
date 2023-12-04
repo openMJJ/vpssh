@@ -44,6 +44,9 @@ echo -e "\e[1;99m8. \e[38;5;197mLxdPro开小鸡 (不支持ARM)"
 echo -e "\e[1;33m9. \e[38;5;226m萌咖DD"
 echo -e "\e[1;33m10. \e[38;5;226mtraffmonetizer"
 echo -e "\e[1;34m11. \e[38;5;226四网回程-221.200.110.212"
+echo -e "\e[1;91m12. \e[38;5;208mBlueSkyBox"
+echo -e "\e[1;91m13. \e[38;5;208mVPSToolBox"
+echo -e "\e[1;91m14. \e[38;5;208mEdNovasBox"
 echo -e "\e[1;31m0. \e[38;5;196m退出\e[0m" # 添加 \e[0m 来重置文本颜色和背景颜色
 
   read -p "请选择一级菜单选项 (0-9): " main_choice
@@ -277,6 +280,21 @@ echo -e "\e[1;31m0. \e[38;5;196m退出\e[0m" # 添加 \e[0m 来重置文本颜�
         echo "取消操作"
       fi
       ;; 
+      12)
+      # BlueSkyBox
+      clear_screen=1 # Define clear_screen here
+      wget -O box.sh https://raw.githubusercontent.com/BlueSkyXN/SKY-BOX/main/box.sh && chmod +x box.sh && clear && ./box.sh
+      ;;
+      13)
+      # VPSToolBox
+      clear_screen=1 # Define clear_screen here
+      bash <(curl -Lso- https://sh.vps.dance/toolbox.sh)
+      ;;
+      14)
+      # EdNovasBox
+      clear_screen=1 # Define clear_screen here
+      wget -N https://cdn.jsdelivr.net/gh/ednovas/vpstoolbox@main/ednovastool.sh && chmod +x ednovastool.sh && ./ednovastool.sh
+      ;;
     0)
       # Exit
       tput sgr0
@@ -287,5 +305,6 @@ echo -e "\e[1;31m0. \e[38;5;196m退出\e[0m" # 添加 \e[0m 来重置文本颜�
     *)
       echo "无效的选项"
       ;;
+      
   esac
 done
