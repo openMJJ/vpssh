@@ -300,7 +300,8 @@ echo -e "\e[1;31m0. \e[38;5;196m退出\e[0m" # 添加 \e[0m 来重置文本颜�
       # Linux网络优化脚本
       clear_screen=0 # Define clear_screen here
       wget http://sh.nekoneko.cloud/tools.sh -O tools.sh && bash tools.sh
-    0)
+      ;;
+      0)
       # Exit
       tput sgr0
       clear
