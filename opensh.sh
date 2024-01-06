@@ -47,6 +47,7 @@ echo -e "\e[1;34m11. \e[38;5;226四网回程-221.200.110.212"
 echo -e "\e[1;91m12. \e[38;5;208mBlueSkyBox"
 echo -e "\e[1;91m13. \e[38;5;208mVPSToolBox"
 echo -e "\e[1;91m14. \e[38;5;208mEdNovasBox"
+echo -e "\e[1;33m15. \e[38;5;226mLinux网络优化脚本"
 echo -e "\e[1;31m0. \e[38;5;196m退出\e[0m" # 添加 \e[0m 来重置文本颜色和背景颜色
 
   read -p "请选择一级菜单选项 (0-9): " main_choice
@@ -295,6 +296,10 @@ echo -e "\e[1;31m0. \e[38;5;196m退出\e[0m" # 添加 \e[0m 来重置文本颜�
       clear_screen=0 # Define clear_screen here
       wget -N https://cdn.jsdelivr.net/gh/ednovas/vpstoolbox@main/ednovastool.sh && chmod +x ednovastool.sh && ./ednovastool.sh
       ;;
+      15)
+      # Linux网络优化脚本
+      clear_screen=0 # Define clear_screen here
+      wget http://sh.nekoneko.cloud/tools.sh -O tools.sh && bash tools.sh
     0)
       # Exit
       tput sgr0
