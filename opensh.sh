@@ -37,6 +37,7 @@ echo -e "\e[1;96m1. \e[38;5;226mTimeshift-系统镜像"
 echo -e "\e[1;91m2. \e[38;5;208m科技lion"
 echo -e "\e[1;94m3. \e[38;5;75mx-ui-富强面板"
 echo -e "\e[1;93m4. \e[38;5;208m八合一-富强脚本"
+echo -e "\e[1;93m4.1. \e[38;5;208misaka-HY2"
 echo -e "\e[1;97m5. \e[38;5;33mSing-box 全家桶"
 echo -e "\e[1;98m6. \e[38;5;45miptables端口转发"
 echo -e "\e[1;98m7. \e[38;5;45mTGPROTO"
@@ -177,6 +178,19 @@ echo -e "\e[1;31m0. \e[38;5;196m退出\e[0m" # 添加 \e[0m 来重置文本颜�
         echo "取消操作"
       fi
       ;;
+    4.1)
+      # misaka-HY2
+      clear_screen=1 # Define clear_screen here
+      read -p "确认要继续吗？(Y/N): " confirm
+      if [ "$confirm" == "Y" ] || [ "$confirm" == "y" ]; then
+        bash <(curl -fsSL https://get.hy2.sh/) && bash hysteria.sh
+        # Don't clear the screen
+        clear_screen=0
+      else
+        echo "取消操作"
+      fi
+      ;;
+     
     5)
       # 【Sing-box 全家桶】
       clear_screen=1 # Define clear_screen here
