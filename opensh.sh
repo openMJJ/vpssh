@@ -33,23 +33,23 @@ EOF
   echo -e "\e[0m"
   
   # Main menu
-echo -e "\e[1;96m1. \e[38;5;226mTimeshift-系统镜像"
-echo -e "\e[1;91m2. \e[38;5;208m科技lion"
-echo -e "\e[1;94m3. \e[38;5;75mx-ui-富强面板"
-echo -e "\e[1;93m4. \e[38;5;208m八合一-富强脚本"
-echo -e "\e[1;93m4.1. \e[38;5;208misaka-HY2"
-echo -e "\e[1;97m5. \e[38;5;33mSing-box 全家桶"
-echo -e "\e[1;98m6. \e[38;5;45miptables端口转发"
-echo -e "\e[1;98m7. \e[38;5;45mTGPROTO"
-echo -e "\e[1;99m8. \e[38;5;197mLxdPro开小鸡 (不支持ARM)"
-echo -e "\e[1;33m9. \e[38;5;226m萌咖DD"
-echo -e "\e[1;33m10. \e[38;5;226mtraffmonetizer"
-echo -e "\e[1;34m11. \e[38;5;226四网回程-221.200.110.212"
-echo -e "\e[1;91m12. \e[38;5;208mBlueSkyBox"
-echo -e "\e[1;91m13. \e[38;5;208mVPSToolBox"
-echo -e "\e[1;91m14. \e[38;5;208mEdNovasBox"
-echo -e "\e[1;33m15. \e[38;5;226mLinux网络优化脚本"
-echo -e "\e[1;31m0. \e[38;5;196m退出\e[0m" # 添加 \e[0m 来重置文本颜色和背景颜色
+echo -e "\e[1;96m1& \e[38;5;226mTimeshift-系统镜像"
+echo -e "\e[1;91m2& \e[38;5;208m科技lion"
+echo -e "\e[1;94m3& \e[38;5;75mx-ui-富强面板"
+echo -e "\e[1;93m4& \e[38;5;208m八合一-富强脚本"
+echo -e "\e[1;93m4.1& \e[38;5;208misaka-HY2"
+echo -e "\e[1;97m5& \e[38;5;33mSing-box 全家桶"
+echo -e "\e[1;98m6& \e[38;5;45miptables端口转发"
+echo -e "\e[1;98m7& \e[38;5;45mTGPROTO"
+echo -e "\e[1;99m8& \e[38;5;197mLxdPro开小鸡 (不支持ARM)"
+echo -e "\e[1;33m9& \e[38;5;226m萌咖DD"
+echo -e "\e[1;33m10& \e[38;5;226mtraffmonetizer"
+echo -e "\e[1;34m11& \e[38;5;226四网回程-221.200.110.212"
+echo -e "\e[1;91m12& \e[38;5;208mBlueSkyBox"
+echo -e "\e[1;91m13& \e[38;5;208mVPSToolBox"
+echo -e "\e[1;91m14& \e[38;5;208mEdNovasBox"
+echo -e "\e[1;33m15& \e[38;5;226mLinux网络优化脚本"
+echo -e "\e[1;31m0& \e[38;5;196m退出\e[0m" # 添加 \e[0m 来重置文本颜色和背景颜色
 
   read -p "请选择一级菜单选项 (0-9): " main_choice
 
