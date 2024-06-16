@@ -183,7 +183,7 @@ echo -e "\e[1;31m0& \e[38;5;196m退出\e[0m" # 添加 \e[0m 来重置文本颜�
       clear_screen=1 # Define clear_screen here
       read -p "确认要继续吗？(Y/N): " confirm
       if [ "$confirm" == "Y" ] || [ "$confirm" == "y" ]; then
-        bash <(curl -fsSL https://raw.githubusercontent.com/Misaka-blog/hysteria-install/main/hy2/hysteria.sh/) && bash hysteria.sh
+        curl -sSL https://raw.githubusercontent.com/Misaka-blog/hysteria-install/main/hy2/hysteria.sh | bash
         # Don't clear the screen
         clear_screen=0
       else
