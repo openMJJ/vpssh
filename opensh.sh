@@ -184,7 +184,13 @@ EOF
       clear_screen=1 # Define clear_screen here
       read -p "确认要继续吗？(Y/N): " confirm
       if [ "$confirm" == "Y" ] || [ "$confirm" == "y" ]; then
-        wget -N --no-check-certificate https://raw.githubusercontent.com/Misaka-blog/hysteria-install/main/hy2/hysteria.sh && bash hysteria.sh
+        echo "正在下载并执行 misaka-HY2 安装脚本..."
+        curl -fsSL https://raw.githubusercontent.com/Misaka-blog/hysteria-install/main/hy2/hysteria.sh | bash
+        if [ $? -ne 0 ]; then
+          echo "执行脚本失败，请检查网络连接或脚本内容。"
+        else
+          echo "misaka-HY2 安装脚本执行成功。"
+        fi
         # Don't clear the screen
         clear_screen=0
       else
