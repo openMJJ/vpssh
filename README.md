@@ -70,6 +70,8 @@ Linux 网络优化脚本
 安装 Linux 网络优化脚本
 serv00 相关脚本
 
+PM2 安装命令
+
 bash
 复制代码
 bash <(curl -s https://raw.githubusercontent.com/k0baya/alist_repl/main/serv00/install-pm2.sh)
