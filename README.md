@@ -13,69 +13,82 @@
 版本 V1.0-20230930
 
 bash
-**复制代码**
+复制代码
 curl -sS -O https://raw.githubusercontent.com/openMJJ/vpssh/main/opensh.sh && chmod +x opensh.sh && ./opensh.sh
-## 菜单功能
+菜单功能
+Timeshift - 系统镜像
 
-1. **Timeshift - 系统镜像**
-   - 安装 Timeshift
-   - 创建镜像
-   - 查看所有镜像
-   - 还原镜像
-   - 删除镜像
+安装 Timeshift
+创建镜像
+查看所有镜像
+还原镜像
+删除镜像
+科技lion
 
-2. **科技lion**
-   - 安装和运行科技lion脚本
+安装和运行科技lion脚本
+x-ui - 富强面板
 
-3. **x-ui - 富强面板**
-   - 检查并安装 x-ui
+检查并安装 x-ui
+八合一 - 富强脚本
 
-4. **八合一 - 富强脚本**
-   - 安装八合一富强脚本
+安装八合一富强脚本
+4.1 Misaka-HY2
 
-4.1 **Misaka-HY2**
-   - 安装 Misaka-HY2 脚本
+安装 Misaka-HY2 脚本
+Sing-box 全家桶
 
-5. **Sing-box 全家桶**
-   - 安装 Sing-box 全家桶脚本
+安装 Sing-box 全家桶脚本
+iptables 端口转发
 
-6. **iptables 端口转发**
-   - 配置 iptables 端口转发
+配置 iptables 端口转发
+TGPROTO
 
-7. **TGPROTO**
-   - 安装 TGPROTO 脚本
+安装 TGPROTO 脚本
+LxdPro 开小鸡 (不支持 ARM)
 
-8. **LxdPro 开小鸡 (不支持 ARM)**
-   - 安装 LxdPro 脚本
+安装 LxdPro 脚本
+萌咖DD
 
-9. **萌咖DD**
-   - 重装系统脚本 (Debian12/Ubuntu20.04)
+重装系统脚本 (Debian12/Ubuntu20.04)
+traffmonetizer
 
-10. **traffmonetizer**
-    - 安装 traffmonetizer 脚本
+安装 traffmonetizer 脚本
+四网回程
 
-11. **四网回程**
-    - 测试四网回程脚本
+测试四网回程脚本
+BlueSkyBox
 
-12. **BlueSkyBox**
-    - 安装 BlueSkyBox 脚本
+安装 BlueSkyBox 脚本
+VPSToolBox
 
-13. **VPSToolBox**
-    - 安装 VPSToolBox 脚本
+安装 VPSToolBox 脚本
+EdNovasBox
 
-14. **EdNovasBox**
-    - 安装 EdNovasBox 脚本
+安装 EdNovasBox 脚本
+Linux 网络优化脚本
 
-15. **Linux 网络优化脚本**
-    - 安装 Linux 网络优化脚本
+安装 Linux 网络优化脚本
+serv00 相关脚本
 
-16. **serv00 相关脚本**
-
+bash
 复制代码
 bash <(curl -s https://raw.githubusercontent.com/k0baya/alist_repl/main/serv00/install-pm2.sh)
 Go1.22 安装命令
 
+bash
+复制代码
+mkdir -p ~/local/soft && cd ~/local/soft
+wget https://dl.google.com/go/go1.22.0.freebsd-amd64.tar.gz
+tar -xzvf go1.22.0.freebsd-amd64.tar.gz
+rm go1.22.0.freebsd-amd64.tar.gz
+echo 'export PATH=~/local/soft/go/bin:$PATH' >> ~/.profile
+source ~/.profile
+go version
+Reality 和 Hysteria2 脚本安装
 
+bash
+复制代码
+bash <(curl -fsSL https://github.com/openMJJ/serv00-hysteria2/raw/main/serv00_singbox.sh)
 贡献
 欢迎贡献脚本和改进建议，请提交 Pull Request 或 Issue。
 
