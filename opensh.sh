@@ -33,25 +33,26 @@ EOF
   echo -e "\e[0m"
   
   # Main menu
-echo -e "\e[1;96m1& \e[38;5;226mTimeshift-系统镜像"
-echo -e "\e[1;91m2& \e[38;5;208m科技lion"
-echo -e "\e[1;94m3& \e[38;5;75mx-ui-富强面板"
-echo -e "\e[1;93m4& \e[38;5;208m八合一-富强脚本"
-echo -e "\e[1;93m4.1& \e[38;5;208mMisaka-HY2"
-echo -e "\e[1;97m5& \e[38;5;33mSing-box 全家桶"
-echo -e "\e[1;98m6& \e[38;5;45miptables端口转发"
-echo -e "\e[1;98m7& \e[38;5;45mTGPROTO"
-echo -e "\e[1;99m8& \e[38;5;197mLxdPro开小鸡 (不支持ARM)"
-echo -e "\e[1;33m9& \e[38;5;226m萌咖DD"
-echo -e "\e[1;33m10& \e[38;5;226mtraffmonetizer"
-echo -e "\e[1;34m11& \e[38;5;226四网回程-221.200.110.212"
-echo -e "\e[1;91m12& \e[38;5;208mBlueSkyBox"
-echo -e "\e[1;91m13& \e[38;5;208mVPSToolBox"
-echo -e "\e[1;91m14& \e[38;5;208mEdNovasBox"
-echo -e "\e[1;33m15& \e[38;5;226mLinux网络优化脚本"
-echo -e "\e[1;31m0& \e[38;5;196m退出\e[0m" # 添加 \e[0m 来重置文本颜色和背景颜色
+  echo -e "\e[1;96m1& \e[38;5;226mTimeshift-系统镜像"
+  echo -e "\e[1;91m2& \e[38;5;208m科技lion"
+  echo -e "\e[1;94m3& \e[38;5;75mx-ui-富强面板"
+  echo -e "\e[1;93m4& \e[38;5;208m八合一-富强脚本"
+  echo -e "\e[1;93m4.1& \e[38;5;208mMisaka-HY2"
+  echo -e "\e[1;97m5& \e[38;5;33mSing-box 全家桶"
+  echo -e "\e[1;98m6& \e[38;5;45miptables端口转发"
+  echo -e "\e[1;98m7& \e[38;5;45mTGPROTO"
+  echo -e "\e[1;99m8& \e[38;5;197mLxdPro开小鸡 (不支持ARM)"
+  echo -e "\e[1;33m9& \e[38;5;226m萌咖DD"
+  echo -e "\e[1;33m10& \e[38;5;226mtraffmonetizer"
+  echo -e "\e[1;34m11& \e[38;5;226四网回程-221.200.110.212"
+  echo -e "\e[1;91m12& \e[38;5;208mBlueSkyBox"
+  echo -e "\e[1;91m13& \e[38;5;208mVPSToolBox"
+  echo -e "\e[1;91m14& \e[38;5;208mEdNovasBox"
+  echo -e "\e[1;33m15& \e[38;5;226mLinux网络优化脚本"
+  echo -e "\e[1;34m16& \e[38;5;226mserv00相关脚本" # 新增一级目录
+  echo -e "\e[1;31m0& \e[38;5;196m退出\e[0m" # 添加 \e[0m 来重置文本颜色和背景颜色
 
-  read -p "请选择一级菜单选项 (0-9): " main_choice
+  read -p "请选择一级菜单选项 (0-16): " main_choice
 
   case $main_choice in
     1)
@@ -315,7 +316,52 @@ echo -e "\e[1;31m0& \e[38;5;196m退出\e[0m" # 添加 \e[0m 来重置文本颜�
       clear_screen=0 # Define clear_screen here
       wget http://sh.nekoneko.cloud/tools.sh -O tools.sh && bash tools.sh
       ;;
-      0)
+    16)
+      # serv00相关脚本
+      clear_screen=1 # Define clear_screen here
+      while true; do
+        echo -e "\e[1;33m==================================="
+        echo -e "=== serv00相关脚本 功能菜单 ==="
+        echo -e "===================================\e[0m"
+        # serv00子菜单
+        echo -e "\e[1;31m1. PM2 安装命令\e[0m"
+        echo -e "\e[1;32m2. Go1.22 安装命令\e[0m"
+        echo -e "\e[1;33m3. Reality和Hysteria2 脚本安装\e[0m"
+        echo -e "\e[1;31m0. 返回上级菜单\e[0m"
+
+        read -p "请选择选项 (0-3): " choice
+
+        case $choice in
+          1)
+            # PM2 安装命令
+            bash <(curl -s https://raw.githubusercontent.com/k0baya/alist_repl/main/serv00/install-pm2.sh)
+            ;;
+          2)
+            # Go1.22 安装命令
+            mkdir -p ~/local/soft && cd ~/local/soft
+            wget https://dl.google.com/go/go1.22.0.freebsd-amd64.tar.gz
+            tar -xzvf go1.22.0.freebsd-amd64.tar.gz
+            rm go1.22.0.freebsd-amd64.tar.gz
+            echo 'export PATH=~/local/soft/go/bin:$PATH' >> ~/.profile
+            source ~/.profile
+            go version
+            ;;
+          3)
+            # Reality和Hysteria2 脚本安装
+            bash <(curl -fsSL https://github.com/openMJJ/serv00-hysteria2/raw/main/serv00_singbox.sh)
+            ;;
+          0)
+            # 返回上级菜单
+            clear_screen=1
+            break
+            ;;
+          *)
+            echo "无效的选项"
+            ;;
+        esac
+      done
+      ;;
+    0)
       # Exit
       tput sgr0
       clear
