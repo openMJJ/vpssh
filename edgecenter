@@ -1,0 +1,25 @@
+source /etc/network/interfaces.d/*
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# The primary network interface (IPv4)
+allow-hotplug ens3
+iface ens3 inet static
+    address 92.38.189.150/24
+    gateway 92.38.189.1
+    # dns-* options are implemented by the resolvconf package, if installed
+    dns-nameservers 8.8.8.8
+    dns-search unlil.com
+
+# The primary network interface (IPv6)
+iface ens3 inet6 static
+    address 2a11:27c0:195::900/125
+    gateway 2a11:27c0:195::1
+    dns-nameservers 2001:4860:4860::8888
+
+
+
+
+    /etc/network/interfaces 里然后 systemctl restart networking
