@@ -21,5 +21,5 @@ iface ens3 inet6 static
 
 
 
-
+     iface eth0 inet6 dhcp 
     /etc/network/interfaces 里然后 systemctl restart networking
