@@ -23,3 +23,7 @@ iface ens3 inet6 static
 
      iface eth0 inet6 dhcp 
     /etc/network/interfaces 里然后 systemctl restart networking
+
+
+DNS分流：https://www.nodeseek.com/post-229790-1
+            https://github.com/Jimmyzxk/DNS-Alice-Unlock
