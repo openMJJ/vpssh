@@ -147,7 +147,7 @@ EOF
           ;;
         2)
           # 重新安装 X-ui
-          bash <(curl -Ls https://raw.githubusercontent.com/xeefei/3x-ui/master/install.sh)
+          bash <(curl -Ls https://raw.githubusercontent.com/mhsanaei/3x-ui/master/install.sh)
           # 不清屏
           clear_screen=0
           ;;
