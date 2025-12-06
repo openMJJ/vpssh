@@ -185,7 +185,7 @@ EOF
       read -p "确认要继续吗？(Y/N): " confirm
       if [ "$confirm" == "Y" ] || [ "$confirm" == "y" ]; then
         echo "正在下载并执行 HY2 安装脚本..."
-        curl -sSL https://github.com/seagullz4/hysteria2/raw/main/install.sh -o install.sh && chmod 777 install.sh && bash install.sh
+        wget -N --no-check-certificate https://raw.githubusercontent.com/Misaka-blog/hysteria-install/main/hy2/hysteria.sh && bash hysteria.sh
         if [ $? -ne 0 ]; then
           echo "执行脚本失败，请检查网络连接或脚本内容。"
         else
