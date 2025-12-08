@@ -35,6 +35,7 @@ EOF
   # Main menu
   echo -e "\e[1;96m1& \e[38;5;226mTimeshift-系统镜像"
   echo -e "\e[1;91m2& \e[38;5;208m科技lion"
+  echo -e "\e[1;91m2.1& \e[38;5;208meooce脚本"
   echo -e "\e[1;94m3& \e[38;5;75m3x-ui-富强面板"
   echo -e "\e[1;93m4& \e[38;5;208m八合一-富强脚本"
   echo -e "\e[1;93m4.1& \e[38;5;208mHYSTERIA2"
@@ -130,6 +131,11 @@ EOF
       # 科技lion
       clear_screen=1 # Define clear_screen here
       curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh && chmod +x kejilion.sh && ./kejilion.sh
+      ;;
+    2.1)
+      # EOOCE脚本
+      clear_screen=1 # Define clear_screen here
+      curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh && chmod +x ssh_tool.sh && ./ssh_tool.sh
       ;;
     3)
       # 检查是否已经安装了x-ui
