@@ -219,7 +219,7 @@ EOF
     6)
       # realm端口转发
       clear_screen=1 # Define clear_screen here
-      bash <(curl -L https://host.wxgwxha.eu.org/https://github.com/wcwq98/realm/releases/download/v3.1.2/realm.sh -o realm.sh && chmod +x realm.sh &&  ./realm.sh)
+     bash <(curl -fsSL https://host.wxgwxha.eu.org/https://github.com/wcwq98/realm/releases/download/v3.1.2/realm.sh)
       read -p "按任意键继续..."
       ;;    
     7)
