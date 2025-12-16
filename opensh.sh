@@ -40,7 +40,7 @@ EOF
   echo -e "\e[1;93m4& \e[38;5;208m八合一-富强脚本"
   echo -e "\e[1;93m4.1& \e[38;5;208mHYSTERIA2"
   echo -e "\e[1;97m5& \e[38;5;33mSing-box 全家桶"
-  echo -e "\e[1;98m6& \e[38;5;45miptables端口转发"
+  echo -e "\e[1;98m6& \e[38;5;45mrealm端口转发"
   echo -e "\e[1;98m7& \e[38;5;45mTGPROTO"
   echo -e "\e[1;99m8& \e[38;5;197mALICE家宽脚本"
   echo -e "\e[1;33m9& \e[38;5;226m萌咖DD"
@@ -217,9 +217,9 @@ EOF
       fi
       ;;
     6)
-      # iptables端口转发
+      # realm端口转发
       clear_screen=1 # Define clear_screen here
-      bash <(curl -fsSL https://raw.githubusercontent.com/arloor/iptablesUtils/master/natcfg.sh)
+      bash <(curl -L https://host.wxgwxha.eu.org/https://github.com/wcwq98/realm/releases/download/v3.1.2/realm.sh -o realm.sh && chmod +x realm.sh &&  ./realm.sh)
       read -p "按任意键继续..."
       ;;    
     7)
